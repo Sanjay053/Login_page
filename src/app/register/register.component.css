@@ -6,10 +6,11 @@
 }
 
 .form-custom{
-    border-radius: 15px;
-    background: rgba(0,0,0,0.5);
-    border:rgba(255, 255, 255, 0.55);
-    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);;
+    background: linear-gradient(to bottom right, #4e80a6, #362d24);
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    /* margin-top: 50px; */
 }
 
 .pad{
@@ -23,6 +24,7 @@ line-height: 2.15;
 padding-left: .75em;
 padding-right: .75em;
 }
+
 .card-registration .select-arrow {
 top: 13px;
 }

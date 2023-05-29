@@ -4,12 +4,12 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
-import { AuthGuard , LoginGuard} from './service/auth.service'
-
+import { LoginGuardGuard } from './loginguard/login-guard.guard';
+import { AuthGuardGuard } from './authguard/auth-guard.guard';
 
 const routes: Routes = [
-  {path: '', component: DashboardComponent, canActivate: [AuthGuard]},
-  {path:'login', component: LoginComponent, canActivate: [LoginGuard]},
+  {path: '', component: DashboardComponent, canActivate: [AuthGuardGuard]},
+  {path:'login', component: LoginComponent, canActivate: [LoginGuardGuard]},
   {path:'register', component: RegisterComponent},
   {path: 'forgetpassword', component:ForgetPasswordComponent}
 ];
