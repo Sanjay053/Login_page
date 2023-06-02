@@ -1,9 +1,7 @@
-import { AuthGuardGuard } from './../authguard/auth-guard.guard';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Observable, tap } from 'rxjs';
-import { LoginGuardGuard } from '../loginguard/login-guard.guard';
 
 @Injectable({
   providedIn: 'root'
@@ -15,22 +13,34 @@ export class AuthService {
   
 
   // login
-  login(username: string, password: string): Observable<any> {
-    const body = { username, password };
-    return this.http.post('https://final-vy64.onrender.com/token', body, {observe: 'response'}).pipe(
+  login(username_or_email: string, password: string): Observable<any> {
+    const body = { username_or_email, password };
+    return this.http.post('https://logintask-deployment.onrender.com/login', body, {observe: 'response'}).pipe(
       tap((response: any)=> {
         this.authToken = response.token;
         localStorage.setItem('authToken', this.authToken ?? '');
-        this.router.navigate(['']);
       })
     );
   }
 
-  logout() {
-    this.authToken = null;
-    localStorage.removeItem('authToken');
-    this.router.navigate(['/login']);
+  // register
+  signup(registrationData: any){
+    return this.http.post('https://logintask-deployment.onrender.com/register', registrationData, { observe: 'response'})
   }
+
+  // logout
+  logout(){ 
+    this.authToken = null;
+    return this.http.post('https://logintask-deployment.onrender.com/logout',{observe: 'response'})
+    
+  }
+
+  //forgetpassword
+  forgetpassword(userdata: any){
+    return this.http.put('https://final-vy64.onrender.com/forget_password', userdata)
+
+  }
+
 
   isAuthenticated() {
     return this.authToken !== null;

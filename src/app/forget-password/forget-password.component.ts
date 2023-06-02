@@ -1,3 +1,4 @@
+import { AuthService } from './../service/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
@@ -16,7 +17,10 @@ export class ForgetPasswordComponent implements OnInit{
   modalSuccessMessage: boolean = false;
   modalErrorMessage: boolean = false;
 
-  constructor(private fb: FormBuilder, private http: HttpClient, private location: Location) { }
+  constructor(private fb: FormBuilder, 
+    private http: HttpClient, 
+    private location: Location,
+    private authservice: AuthService) { }
 
   ngOnInit() {
     this.resetPasswordForm = this.fb.group({
@@ -43,7 +47,7 @@ export class ForgetPasswordComponent implements OnInit{
         return;
       }
   
-      this.http.put('https://final-vy64.onrender.com/forget_password', userdata).subscribe(
+      this.authservice.forgetpassword(userdata).subscribe(
       (response) => {
         console.log('Response ', response);
         // Password successfully updated. Add any additional logic here.

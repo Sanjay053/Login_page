@@ -1,5 +1,5 @@
 import { Component , OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, MaxValidator, MinLengthValidator, PatternValidator, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../service/auth.service'
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
@@ -48,7 +48,8 @@ export class RegisterComponent implements OnInit{
       email: ['', [Validators.required, Validators.email]],
       phonenumber: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
       password: ['', [Validators.required]],
-      reg_no: ['', [Validators.required, Validators.pattern(/^1100\d{2}$/)]],      
+      reg_no: ['', [Validators.required, Validators.pattern(/^1100\d{2}$/)]],
+      age: ['22']     
     });
   }
 
@@ -64,10 +65,11 @@ export class RegisterComponent implements OnInit{
         dob: this.registerForm.get('dob')?.value,
         address: this.registerForm.get('address')?.value,
         email: this.registerForm.get('email')?.value,
-        reg_no: this.registerForm.get('reg_no')?.value
+        reg_no: this.registerForm.get('reg_no')?.value,
+        age: this.registerForm.get('age')?.value
       };
       this.showSpinner = true;
-      this.http.post<RegistrationResponse>('https://final-vy64.onrender.com/register', registrationData)
+      this.authService.signup(registrationData)
       .subscribe(
         (response) => {
           console.log('Registration successful', response);

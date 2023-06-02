@@ -10,9 +10,9 @@
 
             <!-- Username or Email -->
             <label for="exampleInputEmail1" class="form-label">Username or Email address</label>
-            <input type="text" class="form-control form-control-lg" id="username" formControlName="username">
-            <div class="text-danger" *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
-              <div *ngIf="loginForm.get('username')?.errors?.['required']">Username or Email is required</div>
+            <input type="text" class="form-control form-control-lg" id="username_or_email" formControlName="username_or_email">
+            <div class="text-danger" *ngIf="loginForm.get('username_or_email')?.invalid && loginForm.get('username_or_email')?.touched">
+              <div *ngIf="loginForm.get('username_or_email')?.errors?.['required']">Username or Email is required</div>
             </div>
           </div>
 
@@ -25,9 +25,11 @@
             </div>
 
             <!-- Forget Password -->
-            <div class="form-group">
+            <div class="form-group d-flex justify-content-end">
               <a routerLink="/forgetpassword" class="mx-2 badge badge-secondary">Forgot Password?</a>
             </div>
+
+            <!-- Remember me -->
             <div class="form-group">
               <div class="form-check">
                 <input type="checkbox" class="form-check-input" formControlName="rememberMe" id="rememberMe">
