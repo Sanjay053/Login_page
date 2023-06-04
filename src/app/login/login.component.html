@@ -1,12 +1,12 @@
 <section class="w-100 gradient-custom">
   <div class="container py-5 h-100">
-    <div class=" row justify-content-center align-items-center h-100">
-      <div class="col-8 col-lg-6  col-xl-4 form-wrapper">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-8 col-lg-6 col-xl-4 form-wrapper">
         <form [formGroup]="loginForm">
 
           <!-- heading -->
           <h1 class="text-center">Student Login</h1>
-          <div class="form-group ">
+          <div class="form-group">
 
             <!-- Username or Email -->
             <label for="exampleInputEmail1" class="form-label">Username or Email address</label>
@@ -39,15 +39,13 @@
 
             <!-- submit -->
             <div class="form-group text-center">
-              <button type="submit" class="btn btn-info btn-block" (click)="login()"
-                [disabled]="loginForm.invalid || isLoggingIn">
-                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"
-                  *ngIf="isLoggingIn"></span>
+              <button type="submit" class="btn btn-info btn-block" (click)="login()" [disabled]="loginForm.invalid || isLoggingIn">
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="isLoggingIn"></span>
                 {{ isLoggingIn ? 'Loading...' : 'Sign In' }}
               </button>
             </div>
 
-            <!-- Divert to register page  -->
+            <!-- Divert to register page -->
             <div class="form-group text-center">
               <span>Don't have an account?</span>
               <a routerLink="/register" class="mx-2 badge badge-secondary">Sign Up</a>
