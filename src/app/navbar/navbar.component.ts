@@ -16,15 +16,17 @@ export class NavbarComponent {
   ngOnInit(): void {}
 
   logout() {
-    this.authService.logout().subscribe(
-      response =>{
-        console.log(response);
+    // this.authService.logout().subscribe(
+    //   response =>{
+    //     console.log(response);
         
-        localStorage.removeItem('authToken');
+    //     localStorage.removeItem('authToken');
+    //     this.router.navigate(['/login']);
+    //   },
+    //   error => console.log(error)
+    // )
+    
         this.router.navigate(['/login']);
-      },
-      error => console.log(error)
-    )
     this.authService.logout();
   }
 

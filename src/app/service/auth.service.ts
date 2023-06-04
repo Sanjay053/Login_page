@@ -31,7 +31,7 @@ export class AuthService {
   // logout
   logout(){ 
     this.authToken = null;
-    return this.http.post('https://logintask-deployment.onrender.com/logout',{observe: 'response'})
+    // return this.http.post('https://logintask-deployment.onrender.com/logout',{observe: 'response'})
     
   }
 
