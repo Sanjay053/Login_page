@@ -13,11 +13,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "commonjs": {
-              "include": [
-                "node_modules/**"
-              ]
-            },
             "outputPath": "dist/student_login",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -107,7 +102,7 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-  "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           }
         }
