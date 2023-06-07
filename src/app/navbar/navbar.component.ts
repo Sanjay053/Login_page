@@ -26,7 +26,10 @@ export class NavbarComponent {
     //   error => console.log(error)
     // )
     
-        this.router.navigate(['/login']);
+    localStorage.removeItem('authToken');
+    sessionStorage.removeItem('authToken');
+        this.router.navigate(['']);
+        console.log("logout")
     this.authService.logout();
   }
 

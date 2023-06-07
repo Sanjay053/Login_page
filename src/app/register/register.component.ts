@@ -74,7 +74,7 @@ export class RegisterComponent implements OnInit{
         (response) => {
           console.log('Registration successful', response);
             this.showSpinner = false;
-            this.router.navigate(['/login']);
+            this.router.navigate(['']);
         },
         (error) => {
           console.log('Registration failed', error);

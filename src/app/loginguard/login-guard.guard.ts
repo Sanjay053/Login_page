@@ -11,7 +11,7 @@ export class LoginGuardGuard implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     if (this.authService.isAuthenticated()) {
-      this.router.navigate(['']);
+      this.router.navigate(['/dashboard']);
       return false;
     }
     return true;

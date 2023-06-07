@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
 import { Observable, tap } from 'rxjs';
 
 @Injectable({
@@ -9,10 +8,15 @@ import { Observable, tap } from 'rxjs';
 export class AuthService {
   private authToken: string | null = localStorage.getItem('authToken');
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient) {}
   
 
   // login
+  // login(username_or_email: string, password: string) {
+  //   const body = { username_or_email, password };
+  //   return this.http.post('https://logintask-deployment.onrender.com/login', body, {observe: 'response'})
+  // }
+
   login(username_or_email: string, password: string): Observable<any> {
     const body = { username_or_email, password };
     return this.http.post('https://logintask-deployment.onrender.com/login', body, {observe: 'response'}).pipe(
