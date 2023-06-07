@@ -1,5 +1,5 @@
  import { Injectable } from '@angular/core';
- import * as CryptoJS from 'crypto-js'
+ import CryptoJS from 'crypto-js';
 
  @Injectable({
   providedIn: 'root'
@@ -25,7 +25,5 @@ decryptData(encryptedPassword: string): string {
   const decryptedPassword = CryptoJS.enc.Utf8.stringify(decryptedBytes);
   return decryptedPassword;
 }
-
-}
- 
+} 
  
