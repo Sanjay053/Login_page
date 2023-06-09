@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'forgetpassword', component:ForgetPasswordComponent }
 ];
 
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

@@ -12,6 +12,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 
+// Add the import statement for 'tslib'
+import 'tslib';
 
 @NgModule({
   declarations: [
@@ -20,17 +22,17 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
     LoginComponent,
     DashboardComponent,
     NavbarComponent,
-    ForgetPasswordComponent,
-  ],  
+    ForgetPasswordComponent
+  ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     MatFormFieldModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

@@ -54,8 +54,8 @@ export class LoginComponent implements OnInit {
 
       this.isLoggingIn = true;
 
-      console.log("username_or_email : ", username_or_email);
-      console.log("password : ", encryptedPassword);
+      // console.log("username_or_email : ", username_or_email);
+      // console.log("password : ", encryptedPassword);
 
       if (rememberMe) {
         localStorage.setItem('username_or_email', username_or_email);
