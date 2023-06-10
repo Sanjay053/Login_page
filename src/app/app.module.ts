@@ -9,7 +9,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Add the import statement for 'tslib'
 import 'tslib';
 
@@ -27,6 +27,7 @@ import 'tslib';
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
+    BrowserAnimationsModule
     ],
   providers: [CookieService],
   bootstrap: [AppComponent]

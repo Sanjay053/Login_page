@@ -41,7 +41,7 @@ export class AuthService {
   }
 
   studentlist(){
-    return this.http.get('https://logintask-deployment.onrender.com/users_list/?page=1&per_page=10', { observe: 'response'})
+    return this.http.get('https://final-vy64.onrender.com/student_list?page=1&page_size=10', { observe: 'response'})
   }
 
   isAuthenticated() {

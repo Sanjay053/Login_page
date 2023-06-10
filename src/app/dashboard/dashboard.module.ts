@@ -5,6 +5,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { Dashboardcomponent } from './dashboard.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import { MatTableModule } from '@angular/material/table';
+import { FormsModule } from '@angular/forms';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +18,8 @@ import { MatTableModule } from '@angular/material/table';
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    MatTableModule
+    MatTableModule,FormsModule,
+    MatPaginatorModule,
   ]
 })
 export class DashboardModule { }
