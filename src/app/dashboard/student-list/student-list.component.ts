@@ -20,7 +20,7 @@ export class StudentListComponent implements OnInit {
     'gender',
     'username',
     'email',
-    'phonenumber'
+    'phone_number'
   ];
   dataSource: MatTableDataSource<any> = new MatTableDataSource<any>(); // Initialize with empty MatTableDataSource
   @ViewChild(MatPaginator) paginator!: MatPaginator; // ViewChild for MatPaginator

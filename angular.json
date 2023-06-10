@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": ["crypto-js"],
             "outputPath": "dist/student_login",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -37,7 +38,6 @@
             "optimization": {
               "scripts": true,
               "styles": {
-                "minifyCss": false
               }
             }
           },
