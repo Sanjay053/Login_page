@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import {AuthService}from '../service/auth.service'
+import { DashboardModule } from './dashboard.module';
+import { Component, OnInit } from '@angular/core';
+import { AuthService }from '../service/auth.service'
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.css']
 })
 
-export class DashboardComponent {
+export class Dashboardcomponent implements OnInit {
   constructor(private authService: AuthService, private router: Router){}
 
   ngOnInit(): void {

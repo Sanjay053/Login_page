@@ -3,10 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
@@ -20,8 +18,6 @@ import 'tslib';
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    DashboardComponent,
-    NavbarComponent,
     ForgetPasswordComponent
   ],
   imports: [
@@ -30,8 +26,8 @@ import 'tslib';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingModule
-  ],
+    AppRoutingModule,
+    ],
   providers: [CookieService],
   bootstrap: [AppComponent]
 })

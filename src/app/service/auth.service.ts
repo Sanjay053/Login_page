@@ -38,9 +38,11 @@ export class AuthService {
   //forgetpassword
   forgetpassword(userdata: any){
     return this.http.put('https://final-vy64.onrender.com/forget_password', userdata)
-
   }
 
+  studentlist(){
+    return this.http.get('https://logintask-deployment.onrender.com/users_list/?page=1&per_page=10', { observe: 'response'})
+  }
 
   isAuthenticated() {
     return this.authToken !== null;

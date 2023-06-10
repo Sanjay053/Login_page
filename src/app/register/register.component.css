@@ -1,9 +1,9 @@
-.gradient-custom {
+/* .gradient-custom {
     min-height: 100%;
-    background-image: url('reg_bg.jpg') ;
+    background-image: url('bg.jpg') ;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 
 .form-custom{
     background: linear-gradient(to bottom right, #4e80a6, #362d24);
@@ -28,14 +28,14 @@ padding-right: .75em;
 top: 13px;
 }
 
-input[type="text"], 
+/* input[type="text"], 
 input[type="password"], 
 input[type="email"], 
 input[type="date"],
 select{
     background: rgba(0,0,0,0.5);
     color: aliceblue;
-}
+} */
 
 select{
     border: rgba(255, 255, 255, 0.65) 1px solid;

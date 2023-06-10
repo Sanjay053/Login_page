@@ -24,7 +24,10 @@
       "dom"
     ],
     "resolveJsonModule": true,
-    "types": ["connect-history-api-fallback"]
+    "types": ["connect-history-api-fallback",
+    "jest",
+    "mocha"
+  ]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
